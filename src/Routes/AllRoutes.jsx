@@ -1,20 +1,15 @@
-import { useParams } from "react-router-dom"
+import React from "react";
+import { Routes, Route } from "react-router-dom"
 
-
-
-const linkArr = [
-    {link: "", title: "Profile"},
-    {link: "posts", title: "post"},
-    {link: "gallery", title: "Gallery"},
-    {link: "toDo", title: "toDo"},
-]
-
-export const Navbar =()=>{
-    const { id } = useParams()
+const AllRoutes = ()=>{
 
     return (
-        <div>
-            
-        </div>
+        <Routes>
+            <Route path="/" />
+            <Route path="/:id"/>
+            <Route path="posts"/>
+            <Route path="gallery"/>
+            <Route path="todo"/>
+        </Routes>
     )
 }
